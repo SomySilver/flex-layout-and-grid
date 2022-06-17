@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.FlexLink {
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 30px;
+  transition: 0.5s;
+  font-size: 25px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#grad {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 175, 245),
+    rgb(0, 175, 245)
+  );
+}
+.FlexLink:hover {
+  transform: scale(1.2);
+}
+main {
+  margin-top: 40px;
+  flex-grow: 1;
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "a a b" "c d d" "c e e";
+  height: 80vh;
+  width: 70%;
+}
+div {
+  text-align: center;
+  box-shadow: 0 2px 5px -1px black;
+}
+.Firstbox {
+  background-color: rgb(250, 75, 11);
+  grid-area: a;
+}
+
+.Secondbox {
+  background-color: orange;
+  grid-area: b;
+}
+
+.Thirdbox {
+  background-color: rgb(30, 172, 30);
+  grid-area: c;
+  padding-right: 200px;
+}
+
+.Fourthbox {
+  background-color: rgb(0, 175, 245);
+  grid-area: d;
+}
+.Fifthbox {
+  background-color: rgb(0, 175, 245);
+  grid-area: e;
+}

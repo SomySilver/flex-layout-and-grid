@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 25px;
+  font-size: 15px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.Grid {
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 30px;
+  transition: 0.5s;
+  font-size: 25px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#grad {
+  background-image: linear-gradient(hsl(179, 100%, 13%), hsl(184, 100%, 22%));
+}
+
+.Grid:hover {
+  transform: scale(1.2);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+div {
+  padding: 40px;
+}
+
+img,
+h3,
+p {
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: hsl(0, 0%, 95%);
+  font-size: 1.8rem;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+  color: hsl(0, 0%, 100%, 0.75);
+  margin-bottom: 110px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.FirstBox {
+  margin-top: 30px;
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 7px;
+  height: 500px;
+  width: 60%;
+  align-content: space-around;
+}
+
+.SecondBox {
+  background-color: hsl(184, 100%, 22%);
+  height: 500px;
+  width: 60%;
+  align-content: space-around;
+}
+
+.ThirdBox {
+  background-color: hsl(179, 100%, 13%);
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  height: 500px;
+  width: 60%;
+  align-content: space-around;
+}
+
+.Link {
+  text-decoration: none;
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.Link:active {
+  background: none;
+  color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+  border-radius: 25px;
+}
+
+.FirstBox > a {
+  color: hsl(31, 77%, 52%);
+}
+
+.SecondBox > a {
+  color: hsl(184, 100%, 22%);
+}
+
+.ThirdBox > a {
+  color: hsl(179, 100%, 13%);
+}
+
+.FirstBox > p {
+  height: 125px;
+}
+
+.SecondBox > p {
+  height: 125px;
+}
+.ThirdBox > p {
+  height: 125px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 60%;
+    display: grid;
+    grid-template-areas: "a b" "c c";
+  }
+
+  .FirstBox {
+    margin-top: 30px;
+    grid-area: a;
+
+    /* border-top-right-radius: 0;*/
+  }
+
+  .SecondBox {
+    margin-top: 30px;
+    grid-area: 0;
+    /*border-top-right-radius: 10px;*/
+  }
+
+  .ThirdBox {
+    grid-area: c;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+  .FirstBox {
+    margin: 0;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 0px;
+  }
+
+  .SecondBox {
+    margin-top: 0px;
+    /*border-top-right-radius: 0;*/
+  }
+
+  .ThirdBox {
+    margin: 0;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    width: 60%;
+  }
+}
